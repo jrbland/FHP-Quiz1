@@ -1,0 +1,27 @@
+<div>
+  <h1>The Fire Hose Project</h1>
+  <h1>Quiz #2</h1>
+</div>
+<hr>
+<div>
+  
+<div class="booyah-box col-10 offset-1">
+  <h2>Requirements:</h2>
+  <ul>
+    <% @tasks.each do |t| %>
+      <div>
+        <li><%= t.item %> (added by: <%= t.user %>)</li>
+      </div>
+    <% end %>
+  </ul>
+</div>
+
+<div class="booyah-box col-10 offset-1 text-center">
+  <div>
+    <%= button_to('Add New Requirement', new_task_path, method: 'get', class:"btn btn-primary btn-lg") %>
+  </div>
+</div>
+
+<div class="booyah-box col-10 offset-1">
+  <h2>Submitted By: Justin Bland</h2>
+</div>
